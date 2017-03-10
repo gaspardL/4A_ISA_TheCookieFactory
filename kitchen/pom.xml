@@ -4,8 +4,8 @@
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>fr.unice.polytech.isa</groupId>
-    <artifactId>tcf-backend</artifactId>
-    <packaging>war</packaging>
+    <artifactId>tcf-backend-kitchen</artifactId>
+    <packaging>jar</packaging>
     <version>1.0-SNAPSHOT</version>
     <name>ISA :: The Cookie Factory :: J2E Backend</name>
 
@@ -32,11 +32,6 @@
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>org.json</groupId>
-            <artifactId>json</artifactId>
-            <version>${versions.json}</version>
-        </dependency>
         <!-- Dependencies for the OpenEJB framework (provided at runtime by the app server) -->
         <dependency>
             <groupId>org.apache.tomee</groupId>
@@ -118,7 +113,7 @@
     </dependencies>
 
     <build>
-        <finalName>tcf-backend</finalName>
+        <finalName>tcf-backend-kitchen</finalName>
         <defaultGoal>package</defaultGoal>
         <plugins>
             <plugin>
