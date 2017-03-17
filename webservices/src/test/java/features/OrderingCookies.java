@@ -1,34 +1,33 @@
 package features;
 
-import arquillian.AbstractTCFTest;
 import cucumber.api.CucumberOptions;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import cucumber.runtime.arquillian.CukeSpace;
-import org.junit.runner.RunWith;
-import static org.junit.Assert.*;
-
+import fr.unice.polytech.isa.tcf.*;
+import fr.unice.polytech.isa.tcf.entities.*;
+import java.util.Set;
 import javax.ejb.EJB;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.transaction.UserTransaction;
-import java.util.Set;
-
-
-import fr.unice.polytech.isa.tcf.*;
-import fr.unice.polytech.isa.tcf.entities.*;
-
+import static org.junit.Assert.*;
+import org.junit.runner.RunWith;
 
 @RunWith(CukeSpace.class)
 @CucumberOptions(features = "src/test/resources")
-public class OrderingCookies extends AbstractTCFTest {
-    
-    @EJB private CustomerRegistration registration;
-    @EJB private CustomerFinder finder;
-    @EJB(name = "cart-stateless") private CartModifier cart;
-    @EJB(name = "cart-stateless") private CartProcessor processor;
+public class OrderingCookies {
+
+    @EJB
+    private CustomerRegistration registration;
+    @EJB
+    private CustomerFinder finder;
+    @EJB(name = "cart-stateless")
+    private CartModifier cart;
+    @EJB(name = "cart-stateless")
+    private CartProcessor processor;
 
     private Customer customer;
     private Set<Item> cartContents;
@@ -79,15 +78,16 @@ public class OrderingCookies extends AbstractTCFTest {
     /**
      * Cleaning up the test context between each test cases
      */
-
-    @PersistenceContext private EntityManager entityManager;
-    @Inject UserTransaction utx;
+    @PersistenceContext
+    private EntityManager entityManager;
+    @Inject
+    UserTransaction utx;
 
     @cucumber.api.java.After
     public void cleaningUpContext() throws Exception {
         utx.begin();
-            customer = entityManager.merge(customer);
-            entityManager.remove(customer);
+        customer = entityManager.merge(customer);
+        entityManager.remove(customer);
         utx.commit();
         customer = null;
         cartContents = null;
