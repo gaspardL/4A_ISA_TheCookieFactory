@@ -4,10 +4,10 @@
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>fr.unice.polytech.isa</groupId>
-    <artifactId>tcf-backend</artifactId>
-    <packaging>war</packaging>
+    <artifactId>tcf-backend-cart-cashier</artifactId>
+    <packaging>jar</packaging>
     <version>1.0-SNAPSHOT</version>
-    <name>ISA :: The Cookie Factory :: J2E Backend</name>
+    <name>ISA :: The Cookie Factory :: J2E Cart-Cashier</name>
 
     <properties>
         <!-- General Properties -->
@@ -32,6 +32,11 @@
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>fr.unice.polytech.isa</groupId>
+            <artifactId>tcf-backend-kitchen</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
         <dependency>
             <groupId>org.json</groupId>
             <artifactId>json</artifactId>

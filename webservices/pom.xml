@@ -4,10 +4,10 @@
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>fr.unice.polytech.isa</groupId>
-    <artifactId>tcf-backend</artifactId>
-    <packaging>war</packaging>
+    <artifactId>tcf-backend-API</artifactId>
+    <packaging>jar</packaging>
     <version>1.0-SNAPSHOT</version>
-    <name>ISA :: The Cookie Factory :: J2E Backend</name>
+    <name>ISA :: The Cookie Factory :: J2E public API</name>
 
     <properties>
         <!-- General Properties -->
