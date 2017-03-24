@@ -31,6 +31,19 @@
         <versions.shrinkwrap>2.2.6</versions.shrinkwrap>
     </properties>
 
+	<distributionManagement>
+    <repository>
+        <id>central</id>
+        <name>6934768b022f-releases</name>
+        <url>http://10.212.110.137:8081/artifactory/tcf</url>
+    </repository>
+    <snapshotRepository>
+        <id>snapshots</id>
+        <name>6934768b022f-snapshots</name>
+        <url>http://10.212.110.137:8081/artifactory/tcf</url>
+    </snapshotRepository>
+</distributionManagement>
+
     <dependencies>
         <!-- Dependencies for the OpenEJB framework (provided at runtime by the app server) -->
         <dependency>
