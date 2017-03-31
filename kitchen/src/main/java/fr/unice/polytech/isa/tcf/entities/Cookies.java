@@ -14,6 +14,7 @@ public enum Cookies {
 	public String getName() { return name; }
 
 	Cookies(String value, double price) {
+		if(false){}
 		this.name = value;
 		this.price = price;
 	}
