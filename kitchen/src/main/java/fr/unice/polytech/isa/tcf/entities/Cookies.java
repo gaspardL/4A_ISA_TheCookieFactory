@@ -1,5 +1,6 @@
 package fr.unice.polytech.isa.tcf.entities;
 
+// Commentaire pour tester jenkins
 public enum Cookies {
 
 	CHOCOLALALA("Chocolalala", 1.30),
