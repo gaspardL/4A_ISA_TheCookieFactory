@@ -52,19 +52,13 @@
         <repository>
             <id>central</id>
             <url>http://${artifactory.ip}:${artifactory.port}/artifactory/tcf</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
         </repository>
         <repository>
-            <id>snapshots</id>
-            <url>http://${artifactory.ip}:${artifactory.port}/artifactory/tcf</url>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
+            <id>maven-central</id>
+            <url>https://repo1.maven.org/maven2</url>
         </repository>
     </repositories>
-    
+
     <dependencies>
         <!-- J2E Modules dependancies -->
         <dependency>
