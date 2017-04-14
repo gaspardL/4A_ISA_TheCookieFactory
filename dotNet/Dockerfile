@@ -1,7 +1,7 @@
-FROM mono
+FROM mono:latest
 
-COPY server.exe /server.exe
+COPY ./server.exe .
 
 EXPOSE 9090
 
-CMD ["./server.exe", "/standalone"] 
+CMD ["mono", "./server.exe", "/standalone"]
