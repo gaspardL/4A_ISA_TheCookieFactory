@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+
+  # The external partners, implemented as .Net services
+  dotnet_server:
+    image: dotnet_server
+    container_name: dotnet_server
+    expose:
+      - "9090"
+    ports:
+      - "9090:9090"
