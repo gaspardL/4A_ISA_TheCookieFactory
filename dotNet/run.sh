@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker run --rm --name dotnet_server -p 9090:9090 dotnet_server
+docker run --rm --name do_dotnet_server -p 9090:9090 do_dotnet_server

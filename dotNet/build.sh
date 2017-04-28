@@ -2,6 +2,6 @@
 
 ./compile.sh
 
-docker build --rm -t dotnet_server .
+docker build --rm -t do_dotnet_server .
 
 rm -rf server.exe

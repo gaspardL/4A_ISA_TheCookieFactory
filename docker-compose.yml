@@ -1,11 +1,14 @@
+# Buildez individuellement chaque image docker 
+# Commande : docker-compose up -d
+
 version: '2'
 
 services:
 
   # The external partners, implemented as .Net services
-  dotnet_server:
-    image: dotnet_server
-    container_name: dotnet_server
+  do_dotnet_server:
+    image: do_dotnet_server
+    container_name: do_dotnet_server
     expose:
       - "9090"
     ports:

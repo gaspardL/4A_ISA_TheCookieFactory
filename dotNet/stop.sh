@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker exec dotnet_server rm server.LOCK
+docker exec do_dotnet_server rm server.LOCK
