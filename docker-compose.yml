@@ -1,4 +1,4 @@
-# Buildez individuellement chaque image docker 
+# Buildez individuellement chaque image docker
 # Commande : docker-compose up -d
 
 version: '2'
@@ -13,3 +13,17 @@ services:
       - "9090"
     ports:
       - "9090:9090"
+
+  # The Cookie on Demand service, a J2E system
+  do_backend:
+   image: do_backend
+   container_name: do_backend
+   environment:
+     - bank_host=tcf_partners
+     - bank_port=9090
+   expose:
+     - "8080"
+   ports:
+     - "8080:8080"
+   depends_on:
+     - do_dotnet_server
